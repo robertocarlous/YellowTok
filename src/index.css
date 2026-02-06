@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+/* ===== YellowTok Design System ===== */
+@theme {
+  /* Primary Colors */
+  --color-yt-primary: #FACC15;
+  --color-yt-primary-hover: #EAB308;
+  --color-yt-primary-light: #FDE047;
+  --color-yt-primary-glow: rgba(250, 204, 21, 0.3);
+  
+  /* Background Colors */
+  --color-yt-bg: #0A0A0A;
+  --color-yt-bg-elevated: #141414;
+  --color-yt-surface: #1F1F1F;
+  --color-yt-surface-hover: #2A2A2A;
+  
+  /* Text Colors */
+  --color-yt-text: #FFFFFF;
+  --color-yt-text-secondary: #A1A1AA;
+  --color-yt-text-muted: #71717A;
+  
+  /* Accent Colors */
+  --color-yt-success: #22C55E;
+  --color-yt-error: #EF4444;
+  --color-yt-live: #EF4444;
+  
+  /* Borders */
+  --color-yt-border: #27272A;
+  --color-yt-border-light: #3F3F46;
+}
+
+/* ===== Global Styles ===== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-yt-bg);
+  color: var(--color-yt-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-yt-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-yt-surface);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-yt-surface-hover);
+}
+
+/* ===== Custom Utilities ===== */
+.glow-yellow {
+  box-shadow: 0 0 20px var(--color-yt-primary-glow),
+              0 0 40px var(--color-yt-primary-glow);
+}
+
+.glow-yellow-sm {
+  box-shadow: 0 0 10px var(--color-yt-primary-glow);
+}
+
+.text-gradient-yellow {
+  background: linear-gradient(135deg, var(--color-yt-primary-light), var(--color-yt-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Live badge pulse animation */
+@keyframes pulse-live {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-live {
+  animation: pulse-live 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Tap animation for tips */
+@keyframes tap-ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-tap {
+  animation: tap-ripple 0.6s ease-out forwards;
+}
+
+/* Video overlay gradient */
+.video-gradient {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 30%,
+    transparent 60%
+  );
+}
+
+/* Header blur effect */
+.header-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(10, 10, 10, 0.8);
+}
+
+/* Button hover effect */
+.btn-yellow {
+  transition: all 0.2s ease;
+}
+
+.btn-yellow:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--color-yt-primary-glow);
+}
+
+.btn-yellow:active {
+  transform: translateY(0);
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.02);
+  border-color: var(--color-yt-primary);
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-yt-primary);
+  outline-offset: 2px;
+}
+
+/* Hide scrollbar but allow scroll */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

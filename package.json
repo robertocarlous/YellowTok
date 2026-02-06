@@ -1,0 +1,40 @@
+{
+  "name": "yellow-tok",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@erc7824/nitrolite": "^0.5.3",
+    "@react-three/fiber": "^9.5.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "@tanstack/react-query": "latest",
+    "framer-motion": "^12.31.0",
+    "lucide-react": "^0.563.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "^7.13.0",
+    "tailwindcss": "^4.1.18",
+    "three": "^0.182.0",
+    "viem": "latest",
+    "wagmi": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/three": "^0.182.0",
+    "@vitejs/plugin-react": "latest",
+    "@wagmi/cli": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  },
+  "version": "1.0.0",
+  "description": "This is a [Vite](https://vitejs.dev) project bootstrapped with [`create-wagmi`](https://github.com/wevm/wagmi/tree/main/packages/create-wagmi). # yellow-tok",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

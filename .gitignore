@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 
 .env
+package-lock.json
+yarn.lock
+package.json
+pnpm-lock.yaml
+.next
